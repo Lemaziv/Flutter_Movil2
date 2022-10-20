@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    print("Initia State");
+    print("Initial State");
   }
 
   void increment() {

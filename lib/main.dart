@@ -1,7 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:pdm2/Page/my_app_counter.dart';
-import 'package:pdm2/todo/my_app_todo.dart';
+import 'dart:async';
+import 'package:pdm2/todoFirebase/my_app_firebase.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:pdm2/firebase_file.dart';
 
-void main() {
-  runApp(MyApp());
+void main() async{
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  runApp(new MyApp());
+
 }
